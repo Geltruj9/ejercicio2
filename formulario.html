@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" media="screen" href="./styles.css">
+  <title>Formulario</title>
+</head>
+ <!---  Se añadieron etiquetas <label> para cada campo del formulario (name, age, y nationality) para mejorar la accesibilidad.-->
+<body>
+  <header>
+    <h1>Bienvenidos a mi fiesta</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Por favor, confirmar asistencia:</h2>
+
+      <form class="formulario" action="#" method="post">
+        <label for="name">Nombre:</label>
+        <input type="text" name="name" id="name" required>
+        <br>
+
+        <label for="age">Edad:</label>
+        <input type="number" name="age" id="age" min="0" required>
+        <br>
+<!-- Se corrigió el valor del option "Venezolana" de vnzl a ve para mantener coherencia con los valores de tres letras.-->
+        <label for="nationality">Nacionalidad:</label>
+        <select name="nationality" id="nationality" required>
+          <option value="ar">Argentina</option>
+          <option value="mx">Mexicana</option>
+          <option value="pe">Peruana</option>
+          <option value="ve">Venezolana</option>
+        </select>
+        <br>
+<!-- Cambié el botón de envío por una mejor semántica.-->
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Lista de invitados</h2>
+      <div id="guest-list">
+        <!-- Aquí se generará la lista de invitados dinámicamente -->
+      </div>
+    </section>
+  </main>
+
+  <script src="formulario.js"></script>
+</body>
+
+</html>
